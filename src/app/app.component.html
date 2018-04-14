@@ -1,14 +1,16 @@
+<main>
+  <section class="question">
+      <h1>
+        Let us decide for you!
+      </h1>
+      <form>
+        <input type="text" placeholder="Your question here...">
+        <button type="button" (click)="onRequest()">Give me an answer!</button>
+      </form>
+  </section>
 
-<div style="text-align:center">
-  <h1>
-    Let us decide for you!
-  </h1>
-<form>
-  <input type="text" placeholder="Your Yes/No question here...">
-  <button type="submit">Give me an answer!</button>
-</form>
-  <div class="answer">
-    <img [src]="result?.image">
-    <p>{{result?.answer}}</p>
-  </div>
-</div>
+  <section class="response">
+    <img [src]="result?.image"> <!-- This ? sign is to prevent asynchronous related errors -->
+  </section>
+</main>
+

@@ -1,0 +1,92 @@
+$primary-color: #783393;
+$sec-color: #ef4581;
+
+$main-text: #f7e3ff;
+
+$main-button: #f27c21;
+$sec-button: #fcd837;
+
+$break-mid: 768px;
+
+h1 {
+  font-size: 10vw;
+  color: $main-text;
+  letter-spacing: -0.2rem;
+  line-height: 6rem;
+  margin-bottom: 3rem;
+  text-align: right;
+
+  @media screen and (max-width: $break-mid) {
+    line-height: normal;
+    text-align: center;
+    font-size: 14vw;
+    margin-bottom: 1.5rem;
+  }
+}
+
+main {
+  max-width: 1140px;
+  margin: 0 auto;
+  section {
+    float: left;
+    width: 50%;
+    padding: 4rem 1rem;
+    box-sizing: border-box;
+
+    @media screen and (max-width: $break-mid) {
+      text-align: center;
+      float: none;
+      margin-bottom: 3rem;
+      width: 100%;
+    }
+  }
+  form {
+    input {
+      background-color: transparent;
+      border-bottom: 2px $main-text solid;
+      color: white;
+      width: 80%;
+      float: right;
+      margin-bottom: 3rem;
+      text-align: right;
+    }
+    button {
+      color: white;
+      float: right;
+      background-color: $main-button;
+      padding: 0.8rem 2rem;
+      border-radius: 2px;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+
+    @media screen and (max-width: $break-mid) {
+      input, button {
+        float: none;
+        text-align: center;
+      }
+    }
+  }
+
+  .response {
+    text-align: center;
+    padding: 4rem;
+    img {
+      width: 100%;
+    }
+
+    @media screen and (max-width: $break-mid) {
+      padding: 0;
+    }
+  }
+
+  .question {
+    @media screen and (max-width: $break-mid) {
+      padding: 1rem 1.5rem 0;
+    }
+  }
+
+}

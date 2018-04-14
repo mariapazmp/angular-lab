@@ -1,1 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+
+/* ---------
+  Code Challenge for Angular Lab 2 by
+  María Paz Muñoz
+  2018 - Medellín, CO
+--------- */
+
+
+/* Reset styles */
+html {min-height: 100%;  font-family: 'Raleway', sans-serif;}
+html, body {margin: 0; padding: 0; }
+a {text-decoration: none;}
+fieldset { border: none; }
+.clear { clear: both; display: block; }
+a { text-decoration: none; color: #666; }
+a:hover { text-decoration: none; }
+li, ul, body, div, span, p, h1, h2, h3, input { margin: 0px; padding: 0px; }
+ul { list-style-type: none; }
+img { border: none; }
+body, html { font-size: 14px; color: #666; background-color: #783393; }
+button {background-color: transparent; border: none; font-weight: 300}
+input {border: none; font-weight: 500}
+input, button {font-family: 'Raleway', sans-serif;}
+

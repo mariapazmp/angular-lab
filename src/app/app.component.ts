@@ -7,11 +7,16 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title:string;
-  result:any;
-  constructor(private http: HttpClient){
+  result = {
+    answer: '',
+    forced: false,
+    image: 'https://media0.giphy.com/media/5hc2bkC60heU/giphy.gif'
+  };
+
+  constructor(private http: HttpClient) {
   }
-  ngOnInit(): void {
+
+  onRequest(): void {
     this.http.get('https://yesno.wtf/api')
       .subscribe(data => {
         this.result = data;
