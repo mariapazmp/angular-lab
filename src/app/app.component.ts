@@ -6,14 +6,15 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  result = {
-    answer: '',
-    forced: false,
-    image: 'https://media0.giphy.com/media/5hc2bkC60heU/giphy.gif'
-  };
+export class AppComponent{
+  result: any;
 
   constructor(private http: HttpClient) {
+    this.result = {
+      answer: '',
+      forced: false,
+      image: 'https://media0.giphy.com/media/5hc2bkC60heU/giphy.gif'
+    };
   }
 
   onRequest(): void {
