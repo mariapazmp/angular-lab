@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app';
+  title:string;
+  result:any;
+  constructor(private http: HttpClient){
+  }
+  ngOnInit(): void {
+    this.http.get('https://yesno.wtf/api')
+      .subscribe(data => {
+        this.result = data;
+        console.log(this.result);
+      });
+  }
+
 }
